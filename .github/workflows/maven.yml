@@ -36,7 +36,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build and package
-        run: mvn clean package -Dskip tests
+        run: mvn clean package -DskipTests
 
       - name: Run Docker Compose
         run: |
