@@ -20,9 +20,8 @@ public class User {
     @Enumerated(EnumType.STRING)
     private UserRole role;
 
-
-    @OneToMany(mappedBy = "creator", cascade = CascadeType.ALL)
-    private List<Quizz> quizCreated;
+    @ElementCollection
+    private List<Integer> quizCreated;
 
     @ElementCollection
     @CollectionTable(name = "user_scores", joinColumns = @JoinColumn(name = "user_id"))
@@ -67,11 +66,11 @@ public class User {
         this.role = role;
     }
 
-    public List<Quizz> getQuizCreated() {
+    public List<Integer> getQuizCreated() {
         return quizCreated;
     }
 
-    public void setQuizCreated(List<Quizz> quizCreated) {
+    public void setQuizCreated(List<Integer> quizCreated) {
         this.quizCreated = quizCreated;
     }
 

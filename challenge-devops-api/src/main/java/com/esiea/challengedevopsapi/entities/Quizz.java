@@ -17,9 +17,6 @@ public class Quizz {
     @OneToMany(cascade = CascadeType.ALL)
     private List<Question> questions;
 
-    @ManyToOne
-    private User creator;
-
     public Quizz() {
     }
 
@@ -45,13 +42,5 @@ public class Quizz {
 
     public void setQuestions(List<Question> questions) {
         this.questions = questions;
-    }
-
-    public User getCreator() {
-        return creator;
-    }
-
-    public void setCreator(User creator) {
-        this.creator = creator;
     }
 }
