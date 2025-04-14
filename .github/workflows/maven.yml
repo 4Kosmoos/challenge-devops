@@ -36,9 +36,9 @@ jobs:
           distribution: 'temurin'
 
       - name: Build and package
-        run: 
+        run: |
           cd yelp-ea-api
-          mvn package
+          mvn clean package
 
       - name: Run Docker Compose
         run: |
