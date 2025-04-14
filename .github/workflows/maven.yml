@@ -36,7 +36,9 @@ jobs:
           distribution: 'temurin'
 
       - name: Build and package
-        run: mvn clean package -DskipTests
+        run: 
+          cd yelp-ea-api
+          mvn clean package
 
       - name: Run Docker Compose
         run: |
