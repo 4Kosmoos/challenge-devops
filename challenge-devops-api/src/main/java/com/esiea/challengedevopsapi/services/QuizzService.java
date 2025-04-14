@@ -17,7 +17,6 @@ public class QuizzService {
     }
 
     public Quizz createQuizz(Quizz quizz) {
-        // test
         return quizzRepository.save(quizz);
     }
 
