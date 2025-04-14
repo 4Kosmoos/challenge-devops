@@ -38,7 +38,7 @@ jobs:
       - name: Build and package
         run: 
           cd yelp-ea-api
-          mvn clean package
+          mvn package
 
       - name: Run Docker Compose
         run: |
