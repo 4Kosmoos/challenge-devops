@@ -61,7 +61,7 @@ jobs:
 
       - name: Build and package
         run: |
-          cd yelp-ea-api
+          cd challenge-devops-api
           mvn clean package
 
       - name: Log in to Docker Hub
