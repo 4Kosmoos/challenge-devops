@@ -1,0 +1,34 @@
+meta {
+  name: add
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/api/quizz
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "theme": "Culture générale",
+    "questions": [
+      {
+        "question": "Quelle est la capitale de la France ?",
+        "suggestedAnswer": ["Paris", "Lyon", "Marseille", "Bordeaux"],
+        "correctAnswer": "Paris"
+      },
+      {
+        "question": "Quel est le plus grand océan du monde ?",
+        "suggestedAnswer": ["Atlantique", "Pacifique", "Indien", "Arctique"],
+        "correctAnswer": "Pacifique"
+      },
+      {
+        "question": "meilleur dessin animé?",
+        "suggestedAnswer": ["pokémon", "totally spies", "cités d'or", "lapins créatins"],
+        "correctAnswer": "cités d'or"
+      }
+    ]
+  }
+}
